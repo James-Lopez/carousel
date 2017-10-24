@@ -1,0 +1,29 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description":
+    "A slideshow component for cycling through elements like a carousel.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-Lopez/carousel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/James-Lopez/carousel/issues"
+  },
+  "homepage": "https://github.com/James-Lopez/carousel#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
