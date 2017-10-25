@@ -17,23 +17,23 @@ function switchSlide() {
 slides().then(documents => (carousel.slides = documents))
 
 setInterval(() => {
-  switchSlide()
   if (0 < carousel.current < carousel.slides.length - 1) {
     carousel.current++
-  } else if (carousel.current > carousel.slides.length - 1) {
-    carousel.current = 1
-  } else if (carousel.current < 0) {
-    carousel.current = carousel.slides.length - 1
+  } else {
+    carousel.current = 0
   }
+  switchSlide()
 }, 3000)
 
 document.querySelector('.left').addEventListener('click', () => {
+  if (carousel.current === 0) return
   carousel.current--
   console.log('left, now on #' + carousel.current)
   switchSlide()
 })
 
 document.querySelector('.right').addEventListener('click', () => {
+  if (carousel.current === carousel.slides.length - 1) return
   carousel.current++
   console.log('right, now on #' + carousel.current)
   switchSlide()
