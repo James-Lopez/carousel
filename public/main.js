@@ -17,14 +17,14 @@ function switchSlide() {
 }
 
 setInterval(() => {
+  switchSlide()
+  progress()
   if (carousel.current < carousel.slides.length - 1) {
     carousel.current++
   } else {
     carousel.current = 0
   }
-  switchSlide()
-  progress()
-}, 3000)
+}, 3500)
 
 document.querySelector('.left').addEventListener('click', () => {
   carousel.current--
@@ -51,6 +51,7 @@ const indicator = document.querySelector('#indicator-container')
 const progress = () => {
   const $indicators = carousel.slides.map((slide, index) => {
     const $indicator = document.createElement('div')
+    $indicator.setAttribute('data-position', index)
 
     if (index === carousel.current) {
       $indicator.className = 'indicator active'
@@ -66,3 +67,7 @@ const progress = () => {
     return parent
   }, indicator)
 }
+
+document.querySelectorAll('.indicator').addEventListener('click', () => {
+  console.log()
+})
