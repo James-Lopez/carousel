@@ -13,13 +13,13 @@ body {
 
 .container {
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
   position: absolute;
   height: 75vh;
   width: 85vw;
   background-color: #313439;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 #carousel {
@@ -33,7 +33,7 @@ body {
   color: #666a71;
   height: 100vh;
   width: 7vw;
-  line-height: 95vh;
+  line-height: 85vh;
   z-index: 100;
   font-size: 6rem;
 }
@@ -56,7 +56,7 @@ body {
   height: 0.5rem;
   width: 5rem;
   bottom: 0;
-  opacity: 0.8;
+  opacity: 0.9;
   float: left;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
